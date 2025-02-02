@@ -16,9 +16,3 @@ def dashboard():
         return redirect(url_for("general.index"))
     return render_template("dashboard.html")
 
-@general.route("/logout")
-def logout():
-    session.clear()
-    
-    flash("saindo...")
-    return redirect(url_for("auth.login"))

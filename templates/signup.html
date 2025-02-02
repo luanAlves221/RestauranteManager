@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">Início</a>
+    </header>
+
+    <main>
+        <h1>Criar Conta</h1>
+        <p>Crie sua conta agora e aproveite as melhores funcionalidades do nosso restaurante.</p>
+
+        <form action="{{ url_for('auth.signup') }}" method="POST">
+            <label for="username">Nome:</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Senha:</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Criar Conta</button>
+        </form>
+
+        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+    </main>
+</body>
+</html>
